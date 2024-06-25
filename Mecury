@@ -10,7 +10,7 @@ local tab = gui:tab{
 }
 
 tab:button({
-    Name = "show prompt",
+    Name = "Info",
     Callback = function()
         tab:prompt{
             Title = "Hey",
@@ -26,13 +26,13 @@ tab:button({
                                 tab:prompt{
                                     Followup = false,
                                     Title = "Discord link",
-                                    Text = "https://",
+                                    Text = "Would you like to copy the discord link?",
                                     Buttons = {
-                                        COPY = function()
+                                       Yes, copy = function()
                                             setclipboard("https://discord.com/invite/hm3vt3gw9x")
                                         end,
-                                        nvm = function()
-                                            gui:set_Status("money")
+                                        Nvm = function()
+                                            print("bruh")
                                         end
                                     }
                                 }
